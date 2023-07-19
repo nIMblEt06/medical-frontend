@@ -11,7 +11,7 @@ const SearchComponent = () => {
     e.preventDefault();
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/getTests?patientId=${searchTerm}`
+        `https://medical-frontend-mu.vercel.app/api/getTests?patientId=${searchTerm}`
       );
       setTests(response.data);
     } catch (error) {
@@ -50,7 +50,7 @@ const SearchComponent = () => {
               <ul>
                 {tests.map((test, index) => (
                   <li key={index} className="text-lg text-white">
-                    {test.name} - {test.date.slice(0,10)}
+                    {test.name} - {test.date.slice(0, 10)}
                   </li>
                 ))}
               </ul>

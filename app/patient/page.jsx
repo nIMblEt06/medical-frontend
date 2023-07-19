@@ -37,7 +37,7 @@ const Patient = () => {
       }
 
       let response = await axios.post(
-        "http://localhost:3000/api/addPatient",
+        "https://medical-frontend-mu.vercel.app/api/addPatient",
         inputState
       );
 
